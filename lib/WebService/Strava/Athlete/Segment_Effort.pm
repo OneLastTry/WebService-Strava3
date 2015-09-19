@@ -30,7 +30,7 @@ use Data::Dumper;
 # Validation functions
 
 my $Ref = sub {
-  croak "auth isn't a 'WebService::Strava::Auth' object!" unless reftype( $_[0] )->class eq "WebService::Strava::Auth";
+  croak "auth isn't a 'WebService::Strava::Auth' object!" unless $_[0]->isa("WebService::Strava::Auth");
 };
 
 my $Bool = sub {
